@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    height: 100vh;
+    user-select: none;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background: aqua;
+}
+.ground{
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
+    background: rgb(0, 0, 0);
+}
+
+#player{
+    height: 60px;
+    width: 60px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 20vh;
+    left: 40px;
+    border-radius: 50%;
+    transition: bottom 0.3s ease;
+}
+
+#obstacles{
+    position: absolute;
+    bottom: 20vh;
+    width: 100%;
+    height: 160px;
+}
+img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    transition: right 2s ease;
+}
+
+.title {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+#tutorial{
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    animation: scale-text 1s linear infinite;
+}
+@keyframes scale-text{
+    0%, 100%{
+        scale: 1.1;
+        color: red;
+    }
+    50%{
+        scale: 1;
+        color: rgba(255, 0, 0, 0.619);
+    }
+}
